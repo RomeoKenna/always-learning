@@ -21,6 +21,5 @@ import org.springframework.context.annotation.ComponentScan;
 public class CommonApplication {
     public static void main(String[] args) throws InterruptedException {
         SpringApplication.run(CommonApplication.class, args);
-        Thread.sleep(100000);
     }
 }
