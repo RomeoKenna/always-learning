@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ComponentScan;
 @Slf4j
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.yfk.common.mapper")
+@MapperScan("com.yfk.yfwork.common.mapper")
 @ComponentScan("com.yfk.yfwork.common.**")
 public class CommonApplication {
     public static void main(String[] args) throws InterruptedException {
