@@ -1,6 +1,8 @@
 package com.yfk.yfwork.common.controller;
 
+import com.yfk.yfwork.common.Serrvice.ApiEnvironmentService;
 import com.yfk.yfwork.common.Serrvice.StudentService;
+import com.yfk.yfwork.common.entity.ApiEnvironment;
 import com.yfk.yfwork.common.entity.Result;
 import com.yfk.yfwork.common.entity.Student;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +21,8 @@ import java.util.List;
 public class StudentController {
     @Resource
     private StudentService studentService;
+    @Resource
+    private ApiEnvironmentService apiEnvironmentService;
 
     @PostMapping("/add")
     public Result<Student> add(@RequestBody Student student) {
@@ -28,5 +32,10 @@ public class StudentController {
     @GetMapping("/getStudentByName")
     public Result<List<Student>> getStudent(@RequestParam String name) {
         return studentService.getStudentByName(name);
+    }
+
+    @GetMapping("/getEnvironment")
+    public Result<ApiEnvironment> getEnvironment(@RequestParam String environmentString) {
+        return apiEnvironmentService.getEnvironment(environmentString);
     }
 }

@@ -9,8 +9,10 @@ package com.yfk.yfwork.common.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Result<T> {
+public class Result<T> implements Serializable {
     /**
      * 响应码，success，fail
      */
@@ -48,6 +50,10 @@ public class Result<T> {
     public static <T> Result<T> success(String message,
                                         T t) {
         return new Result<>("success", message, t);
+    }
+
+    public static <T> Result<T> success(T t) {
+        return new Result<>("success", "message", t);
     }
 
     public Boolean isSuccess() {
