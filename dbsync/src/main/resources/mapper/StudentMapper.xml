@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yfk.dbsync.mapper.DbInfoMapper">
+    <resultMap id="DatabaseSqlInfoMap" type="com.yfk.dbsync.entity.DatabaseSqlInfo">
+        <result column="Database" property="database"/>
+        <result column="Create Database" property="createDatabase"/>
+    </resultMap>
+    <resultMap id="TableSqlInfo" type="com.yfk.dbsync.entity.TableSqlInfo">
+        <result column="Table" property="table"/>
+        <result column="Create Table" property="createTable"/>
+    </resultMap>
+    <select id="getDbNames" resultType="java.lang.String">
+        show DATABASES;
+    </select>
+
+
+    <select id="getTables" resultType="java.lang.String">
+        select table_name
+        from information_schema.TABLES
+        where TABLE_SCHEMA = #{dbName};
+    </select>
+
+    <select id="getDatabaseCreateSql" resultMap="DatabaseSqlInfoMap">
+        show create DATABASE ${dbName};
+    </select>
+
+    <select id="getTableCreateSql" resultMap="TableSqlInfo">
+        show create table ${tableName};
+    </select>
+</mapper>
