@@ -1,9 +1,9 @@
 package com.yfk.spring.aop.demo8;
 
-import com.javacode2018.aop.demo8.test1.MainConfig1;
-import com.javacode2018.aop.demo8.test1.Service1;
-import com.javacode2018.aop.demo8.test2.MainConfig2;
-import com.javacode2018.aop.demo8.test3.MainConfig3;
+import com.yfk.spring.aop.demo8.test1.MainConfig1;
+import com.yfk.spring.aop.demo8.test1.Service1;
+import com.yfk.spring.aop.demo8.test2.MainConfig2;
+import com.yfk.spring.aop.demo8.test3.MainConfig3;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -29,7 +29,7 @@ public class DispatcherTest1 {
             @Override
             public Object loadObject() throws Exception {
                 System.out.println("调用Dispatcher.loadObject()方法");
-                return new LazyLoaderTest1.UserModel("路人甲java," + UUID.randomUUID().toString());
+                return new LazyLoaderTest1.UserModel("springAOP," + UUID.randomUUID().toString());
             }
         };
         enhancer.setCallback(dispatcher);

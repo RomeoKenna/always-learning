@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 public class AspectTest8 {
-    @Pointcut("@args(..,com.javacode2018.aop.demo9.test8.Ann8)")
+    @Pointcut("@args(..,com.yfk.spring.aop.demo9.test8.Ann8)")
     public void pc() {
     }
 

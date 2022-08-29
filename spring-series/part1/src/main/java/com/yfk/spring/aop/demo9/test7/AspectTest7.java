@@ -10,7 +10,7 @@ public class AspectTest7 {
     /**
      * 匹配目标类上有Ann7注解
      */
-    @Pointcut("@target(com.javacode2018.aop.demo9.test7.Ann7)")
+    @Pointcut("@target(com.yfk.spring.aop.demo9.test7.Ann7)")
     public void pc() {
     }
 

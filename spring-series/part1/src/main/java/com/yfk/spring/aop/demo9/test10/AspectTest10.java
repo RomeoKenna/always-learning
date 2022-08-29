@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class AspectTest10 {
 
-    @Pointcut("@within(com.javacode2018.aop.demo9.test10.Ann10)")
+    @Pointcut("@within(com.yfk.spring.aop.demo9.test10.Ann10)")
     public void pc() {
     }
 

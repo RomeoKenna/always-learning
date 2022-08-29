@@ -1,6 +1,6 @@
 package com.yfk.spring.aop.demo5;
 
-import com.javacode2018.aop.demo4.FundsService;
+import com.yfk.spring.aop.demo4.FundsService;
 import org.springframework.aop.MethodBeforeAdvice;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.DefaultPointcutAdvisor;

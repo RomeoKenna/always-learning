@@ -11,7 +11,7 @@ import org.aspectj.lang.annotation.Pointcut;
 public class Aspect1 {
 
     //@2：定义了一个切入点，可以匹配Service1中所有方法
-    @Pointcut("execution(* com.javacode2018.aop.demo9.test1.Service1.*(..,String))")
+    @Pointcut("execution(* com.yfk.spring.aop.demo9.test1.Service1.*(..,String))")
     public void pointcut1() {
     }
 

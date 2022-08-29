@@ -28,7 +28,7 @@ public class LazyLoaderTest1 {
             @Override
             public Object loadObject() throws Exception {
                 System.out.println("调用LazyLoader.loadObject()方法");
-                return new UserModel("路人甲java");
+                return new UserModel("springAOP");
             }
         };
         enhancer.setCallback(lazyLoader);

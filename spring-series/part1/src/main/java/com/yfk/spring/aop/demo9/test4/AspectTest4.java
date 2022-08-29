@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Pointcut;
 public class AspectTest4 {
 
     //@1：目标类型必须是Service3类型的
-    @Pointcut("target(com.javacode2018.aop.demo9.test3.Service3+)")
+    @Pointcut("target(com.yfk.spring.aop.demo9.test3.Service3+)")
     public void pc() {
     }
 
