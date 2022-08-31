@@ -66,7 +66,7 @@ public class Test3 {
         UserService userServiceProxy = (UserService) proxyFactory.getProxy();
 
         //调用代理的work方法
-        userServiceProxy.work("路人");
+        userServiceProxy.work("yfk");
     }
 
     @Test
@@ -192,7 +192,7 @@ public class Test3 {
         UserService userServiceProxy = (UserService) proxyFactory.getProxy();
 
         //调用代理的work方法
-        userServiceProxy.work("路人");
+        userServiceProxy.work("yfk");
     }
 
 }

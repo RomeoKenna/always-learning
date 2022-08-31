@@ -132,7 +132,7 @@ public class AopTest9 {
         proxyFactory.addAspect(AspectTest5.class);
         Service5 proxy = proxyFactory.getProxy();
         //调用2次，第一次传入一个String类型的，第二次传入一个int类型的，看看效果
-        proxy.m1("路人");
+        proxy.m1("yfk");
         proxy.m1(100);
     }
 

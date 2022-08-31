@@ -16,15 +16,15 @@ public class AopTest4 {
     public void test1() {
         //代理工厂
         ProxyFactory proxyFactory = new ProxyFactory(new FundsService());
-        //添加一个方法前置通知，判断用户名不是“路人”的时候，抛出非法访问异常
+        //添加一个方法前置通知，判断用户名不是“yfk”的时候，抛出非法访问异常
         proxyFactory.addAdvice(new MethodBeforeAdvice() {
             @Override
             public void before(Method method,
                                Object[] args,
                                @Nullable Object target) throws Throwable {
                 String userName = (String) args[0];
-                //如果不是路人的时候，抛出非法访问异常
-                if (!"路人".equals(userName)) {
+                //如果不是yfk的时候，抛出非法访问异常
+                if (!"yfk".equals(userName)) {
                     throw new RuntimeException(String.format("[%s]非法访问!", userName));
                 }
             }
@@ -32,7 +32,7 @@ public class AopTest4 {
         //通过代理工厂创建代理
         FundsService proxy = (FundsService) proxyFactory.getProxy();
         //调用代理的方法
-        proxy.recharge("路人", 100);
+        proxy.recharge("yfk", 100);
         proxy.recharge("张学友", 100);
     }
 
@@ -61,6 +61,6 @@ public class AopTest4 {
         //通过代理工厂创建代理
         FundsService proxy = (FundsService) proxyFactory.getProxy();
         //调用代理的方法
-        proxy.cashOut("路人", 2000);
+        proxy.cashOut("yfk", 2000);
     }
 }
