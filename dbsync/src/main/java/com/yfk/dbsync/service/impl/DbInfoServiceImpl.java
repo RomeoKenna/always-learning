@@ -43,14 +43,14 @@ public class DbInfoServiceImpl implements DbInfoService {
                 }
                 inputName(true, dbName, dbName);
                 DatabaseSqlInfo dbInfos = dbInfoMapper.getDatabaseCreateSql(dbName);
-                inputSQL(true, dbInfos.getCreateDatabase(), dbName);
-                List<String> TableNames = dbInfoMapper.getTables(dbName);
+                inputSql(true, dbInfos.getCreateDatabase(), dbName);
+                List<String> tableNames = dbInfoMapper.getTables(dbName);
                 List<TableSqlInfo> tableSqlInfoList = Lists.newLinkedList();
-                for (String tableName : TableNames) {
+                for (String tableName : tableNames) {
                     TableSqlInfo tableSqlInfo = dbInfoMapper.getTableCreateSql(dbName + "." + tableName);
                     if (null != tableSqlInfo) {
                         inputName(false, tableName, dbName);
-                        inputSQL(false, tableSqlInfo.getCreateTable(), dbName);
+                        inputSql(false, tableSqlInfo.getCreateTable(), dbName);
                         tableSqlInfoList.add(tableSqlInfo);
                     }
                 }
@@ -84,7 +84,7 @@ public class DbInfoServiceImpl implements DbInfoService {
         }
     }
 
-    public void inputSQL(boolean flag,
+    public void inputSql(boolean flag,
                          String sql,
                          String deName) {
         if (flag) {
