@@ -10,7 +10,7 @@
         </encoder>
     </appender>
 
-    <logger name="c" level="debug" additivity="false">
+    <logger name="com.yfk" level="debug" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 
