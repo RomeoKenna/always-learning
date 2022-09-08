@@ -28,7 +28,7 @@ public class AsyncTest {
         System.out.println(Thread.currentThread() + " logService.log start," + System.currentTimeMillis());
         logService.log("异步执行方法!");
         System.out.println(Thread.currentThread() + " logService.log end," + System.currentTimeMillis());
-
+        System.out.println();
         //休眠一下，防止@Test退出
         TimeUnit.SECONDS.sleep(3);
     }
