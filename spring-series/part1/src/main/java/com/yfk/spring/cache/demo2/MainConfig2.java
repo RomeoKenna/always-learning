@@ -25,7 +25,7 @@ public class MainConfig2 {
 
     @Bean
     public RedissonClient redissonClient() throws IOException {
-        InputStream is = MainConfig2.class.getResourceAsStream("/com/javacode2018/cache/demo2/redis.yml");
+        InputStream is = MainConfig2.class.getResourceAsStream("/com/yfk/cache/demo2/redis.yml");
         Config config = Config.fromYAML(is);
         return Redisson.create(config);
     }
