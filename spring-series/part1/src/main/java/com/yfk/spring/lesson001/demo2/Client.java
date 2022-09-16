@@ -9,7 +9,7 @@ public class Client {
 
     public static void main(String[] args) {
         //1.bean配置文件位置
-        String beanXml = "classpath:/com/javacode2018/lesson001/demo2/*.xml";
+        String beanXml = "classpath:/com/yfk/lesson001/demo2/*.xml";
 
         //2.创建ClassPathXmlApplicationContext容器，给容器指定需要加载的bean配置文件
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(beanXml);
